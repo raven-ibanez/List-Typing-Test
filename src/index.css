@@ -2,16 +2,26 @@
 @tailwind components;
 @tailwind utilities;
 
-/* Ramen Yard Custom Styles */
-/* Minimal helpers for ramen palette when needed outside tailwind tokens */
-.bg-ramen-cream { background-color: #FFF3E0; }
-.bg-ramen-beige { background-color: #F7E7CE; }
-.text-ramen-red { color: #D7263D; }
-.text-ramen-dark { color: #0B0A0A; }
-.border-ramen-sesame { border-color: #D1C7B7; }
-.ring-ramen-gold { --tw-ring-color: #E0A106; }
+/* Typing Test Leaderboard Custom Styles */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap');
 
-/* Hide scrollbar for mobile nav */
+body {
+  font-family: 'Inter', system-ui, sans-serif;
+  background: linear-gradient(135deg, #000510 0%, #001564 50%, #16041a 100%);
+  min-height: 100vh;
+}
+
+/* Futuristic glow effects */
+.glow-effect {
+  box-shadow: 0 0 20px rgba(106, 27, 154, 0.5), 0 0 40px rgba(0, 21, 100, 0.3);
+}
+
+.glow-effect-hover:hover {
+  box-shadow: 0 0 30px rgba(106, 27, 154, 0.8), 0 0 50px rgba(0, 21, 100, 0.5);
+  transition: box-shadow 0.3s ease;
+}
+
+/* Hide scrollbar but keep functionality */
 .scrollbar-hide {
   -ms-overflow-style: none;
   scrollbar-width: none;
@@ -21,18 +31,21 @@
   display: none;
 }
 
-/* Image loading optimization */
-img {
-  image-rendering: -webkit-optimize-contrast;
-  image-rendering: crisp-edges;
+/* Custom scrollbar for leaderboard */
+.custom-scrollbar::-webkit-scrollbar {
+  width: 8px;
 }
 
-/* Preload critical images */
-.preload-image {
-  content: '';
-  position: absolute;
-  left: -9999px;
-  top: -9999px;
-  width: 1px;
-  height: 1px;
+.custom-scrollbar::-webkit-scrollbar-track {
+  background: rgba(0, 21, 100, 0.3);
+  border-radius: 4px;
+}
+
+.custom-scrollbar::-webkit-scrollbar-thumb {
+  background: rgba(106, 27, 154, 0.6);
+  border-radius: 4px;
+}
+
+.custom-scrollbar::-webkit-scrollbar-thumb:hover {
+  background: rgba(106, 27, 154, 0.8);
 }

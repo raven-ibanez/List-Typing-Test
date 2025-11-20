@@ -4,27 +4,41 @@ export default {
   theme: {
     extend: {
       colors: {
-        ramen: {
-          red: '#D7263D',
-          dark: '#0B0A0A',
-          charcoal: '#111113',
-          cream: '#FFF3E0',
-          beige: '#F7E7CE',
-          gold: '#E0A106',
-          sesame: '#D1C7B7',
-          seaweed: '#1F2937',
-          kimchi: '#B81D24'
+        navy: {
+          50: '#e6e8f0',
+          100: '#b8bdd4',
+          200: '#8a93b8',
+          300: '#5c699c',
+          400: '#2e3f80',
+          500: '#001564', // Main navy blue
+          600: '#00114f',
+          700: '#000d3a',
+          800: '#000925',
+          900: '#000510'
+        },
+        purple: {
+          50: '#f3e8ff',
+          100: '#e1b3ff',
+          200: '#cf7eff',
+          300: '#bd49ff',
+          400: '#ab14ff',
+          500: '#6a1b9a', // Deep purple
+          600: '#55157a',
+          700: '#400f5a',
+          800: '#2b0a3a',
+          900: '#16041a'
         }
       },
       fontFamily: {
-        'pretendard': ['Pretendard', 'system-ui', 'sans-serif'],
-        'noto-kr': ['Noto Serif KR', 'serif']
+        'sans': ['Inter', 'system-ui', 'sans-serif']
       },
       animation: {
         'fade-in': 'fadeIn 0.5s ease-in-out',
         'slide-up': 'slideUp 0.4s ease-out',
         'bounce-gentle': 'bounceGentle 0.6s ease-out',
-        'scale-in': 'scaleIn 0.3s ease-out'
+        'scale-in': 'scaleIn 0.3s ease-out',
+        'glow': 'glow 2s ease-in-out infinite alternate',
+        'pulse-slow': 'pulse 3s cubic-bezier(0.4, 0, 0.6, 1) infinite'
       },
       keyframes: {
         fadeIn: {
@@ -43,6 +57,10 @@ export default {
         scaleIn: {
           '0%': { transform: 'scale(0.95)', opacity: '0' },
           '100%': { transform: 'scale(1)', opacity: '1' }
+        },
+        glow: {
+          '0%': { boxShadow: '0 0 5px rgba(106, 27, 154, 0.5), 0 0 10px rgba(106, 27, 154, 0.3)' },
+          '100%': { boxShadow: '0 0 20px rgba(106, 27, 154, 0.8), 0 0 30px rgba(106, 27, 154, 0.5)' }
         }
       }
     },
